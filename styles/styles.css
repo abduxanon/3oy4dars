@@ -1,0 +1,43 @@
+.burger {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  cursor: pointer;
+  background-color: black;
+}
+.burger_meinu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 60px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.burger_meinu::before,
+.burger_meinu::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 60px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.burger_meinu::before {
+  top: -160px;
+}
+.burger_meinu::after {
+  top: 160px;
+}
+.burger:hover .burger_meinu {
+  background-color: transparent;
+}
+.burger:hover .burger_meinu::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger:hover .burger_meinu::after {
+  top: 0;
+  transform: rotate(135deg);
+}
